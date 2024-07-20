@@ -1,0 +1,44 @@
+local_backend:
+  # when using a custom proxy server port
+  url: http://localhost:8088/api/v1
+
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+  commit_messages:
+    create: Feat Create {{collection}} “{{slug}}”
+    update: Fix Update {{collection}} “{{slug}}”
+    delete: Del Delete {{collection}} “{{slug}}”
+    uploadMedia: Feat Upload “{{path}}”
+    deleteMedia: Del Delete “{{path}}”
+    openAuthoring: '{{message}}'
+
+site_url: ''
+display_url: ''
+logo_url: https://your-site.com/images/logo.svg
+
+media_folder: "./assets/uploads/" # Media file
+public_folder: "/assets/uploads/"
+
+collections:
+  - name: "project" # Used in routes, e.g., /admin/collections/blog
+    label: "Projets" # Used in the UI
+    folder: "./src/posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "seo"
+        label: "SEO"
+        delete: false
+        file: "./src/_data/meta.json"
+        fields:
+          - {label: "Site name", name: "title", widget: "string", hint: "used for SEO"}
+          - {label: "Site meta description", name: "description", widget: "string", hint: "used for SEO"}
+          - {label: "Author", name: "author", widget: "string"}
+          - {label: "Twitter handler", name: "twitter", widget: "string", hint: "@username"}
+          - {label: "Primary color", name: "color", widget: "color", hint: "used for icons on iphone"}

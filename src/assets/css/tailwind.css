@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+
+  /* Syntax Highlighting*/
+
+  body :not(pre)>code[class*="language-"],
+  body pre[class*="language-"] {
+    @apply bg-gray-800;
+  }
+
+
+  .skiplink {
+    clip: rect(1px, 1px, 1px, 1px);
+    color: blue;
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "title": "Kaiseki Company",
+    "description": "Consulting agency for your needs",
+    "url": "https://kaiseki.co",
+    "lang": "en",
+    "locale": "en_us",
+    "author": "Romain Goutte",
+    "favicon": "./src/assets/img/favicon.png",
+    "twitter": "romaingtt",
+    "color": "#cccccc"
+}

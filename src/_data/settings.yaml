@@ -1,0 +1,31 @@
+# Image settings (lovell/sharp). JPEG format can't be disabled via the CMS.
+images:
+  avif:
+    enabled: true
+    quality: 75
+  webp:
+    enabled: true
+    quality: 75
+  jpeg:
+    # at least JPEG should be enabled
+    enabled: true
+    # Compression quality from 1-100
+    quality: 75
+# Locale and translations
+i18n:
+  # any valid ISO language code e.g. en or en-US
+  site_language: en
+  # single-language translations can be defined here
+  site_social_title: GitHub
+# Internal config, hidden from Tina CMS
+config:
+  # define responsive image widths for project thumbnails and large images
+  # modifying these will require a corresponding change to viewport sizes in responsive image markup
+  image_grid_width_sm: 640
+  image_grid_width_md: 1080
+  image_grid_width_lg: 1800
+  image_width_sm: 1080
+  image_width_md: 1800
+  image_width_lg: 2400
+  # define the optional system font stack
+  font_stack_system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
