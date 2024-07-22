@@ -1,0 +1,12 @@
+{% macro data(text, url='', type='primary', class='') %}
+
+{%- if type == 'primary' -%}
+    {%- set defaultClass = 'py-4 px-8 font-bold rounded-full border-2 transition-all duration-300 ease-linear border-blue bg-blue text-white after:bg-orange hover:border-orange hover:text-white hover:bg-orange' -%}
+    {%- elseif type == 'secondary' -%}
+    {%- set defaultClass = 'py-4 px-8 rounded-full border-2 transition-all duration-300 ease-linear border-black bg-transparent text-black after:bg-orange hover:border-orange hover:text-white hover:bg-orange' -%}
+{%- endif -%}
+
+<a href="{{ url }}"
+    class="{{ defaultClass }} {{class}}">
+    {{ text }}</a>
+{% endmacro %}

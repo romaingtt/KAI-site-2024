@@ -20,9 +20,10 @@ const metagen = require('eleventy-plugin-metagen');
 
 const { resolve } = require('path')
 
-
-
 module.exports = function (eleventyConfig) {
+
+	eleventyConfig.addShortcode('tag', (arg) => `<div>${arg}</div>`);
+
 	eleventyConfig.addPlugin(metagen);
 	/*// https://www.11ty.dev/docs/plugins/image/
 	// Generate PNG icon files and a link tag from a source SVG or PNG file

@@ -6,7 +6,7 @@
             <a href="javascript:void(0)" class="text-right text-black"
             onclick="toggleMenu()">&times;</a>
         </li>
-        {%- for item in collections.all | eleventyNavigation -%}
+        {%- for item in collections.pages | eleventyNavigation -%}
             {%- if item.url -%}
                 {%- set isCurrent = (item.url == page.url) -%}
                 {%- set isParent = item.url != '/' and item.url in page.url -%}

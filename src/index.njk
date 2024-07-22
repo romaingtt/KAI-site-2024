@@ -1,8 +1,27 @@
 ---
 layout: base
 eleventyNavigation:
-  key: Home
-  order: 1
+key: Home
+order: 1
 ---
-
 {% include "../src/_includes/components/hero.njk" %}
+{% include "../src/_includes/components/service.njk" %}
+{% set left = {
+title: 'Process Automation',
+content: 'Process automation using technology to automate repetitive tasks and streamline workflows. This helps
+businesses increase efficiency, reduce errors, and free up valuable time for more strategic activities.',
+point1:'Workflow Optimization: Streamline your business processes to increase efficiency.',
+point2:'Task Automation: Automate repetitive tasks to save time and reduce errors.',
+point3:'Software Integration: Integrate your existing tools and systems for seamless operation.' } %}
+{% include "../src/_includes/components/left.njk" %}
+{% set right = {
+title: 'Design Implementation',
+content: 'Design implementation ensures that your brand’s visual and
+functional aspects are effectively executed across all platforms. This includes creating user-friendly interfaces,
+cohesive branding, and high-performing websites and applications.', 
+point1:'UI/UX Design: Create intuitive and engaging user experiences.', 
+point2:'Brand Design: Develop a cohesive and compelling brand identity.', 
+point3:'Web & App Development: Build responsive and high-performing websites and applications.' }
+%}
+{% include "../src/_includes/components/right.njk" %}
+{% include "../src/_includes/components/contact.njk" %}

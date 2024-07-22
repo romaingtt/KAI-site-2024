@@ -1,0 +1,111 @@
+{% import "./abutton.njk" as button %}
+
+<section id="service" class="px-4">
+
+    <div class="pb-20 pt-20 xl:pb-40 xl:pt-32">
+
+        <div class="">
+            <div class="mb-10 lg:mb-16 xl:mb-20">
+                <div class="md:max-w-lg lg:max-w-2xl xl:max-w-3xl">
+                    <h2 class="">How We Help Small Businesses Succeed</h2>
+                </div>
+            </div>
+
+            <ul class="grid grid-cols-1 gap-[2px] overflow-hidden rounded-[10px] border-2 border-black bg-black sm:grid-cols-2 lg:grid-cols-4 jos"
+                data-jos_once="1" data-jos_animation="fade-up" data-jos_counter="1" data-jos_scrolldirection="down">
+
+                <li class="group bg-white p-8 transition-all duration-300 ease-in-out hover:bg-black">
+                    <div class="relative mb-9 h-[70px] w-[70px]">
+                        <img src="assets/img/th-1/service-icon-black-1.svg" alt="" width="70" height="70">
+                    </div>
+                    <h3
+                        class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]">
+                        <a class="hover:text-orange" href="/service-details">
+                            Operational Excellence
+                        </a>
+                    </h3>
+
+                    <p class="mb-12 duration-300 group-hover:text-white">
+                        We focus on the operational side of your business, ensuring that your processes are as efficient
+                        and effective as possible. From automating routine tasks to implementing sophisticated design
+                        solutions, we help you save time, reduce costs, and boost productivity.
+                    </p>
+
+                    {# {{ button.data( 'Automate', url = '/automate', type='secondary', class='group-hover:text-white
+                    group-hover:border-white' ) }} #}
+                </li>
+
+                <li class="group bg-white p-8 transition-all duration-300 ease-in-out hover:bg-black">
+                    <div class="relative mb-9 h-[70px] w-[70px]">
+                        <img src="assets/img/th-1/service-icon-black-2.svg" alt="service-icon-black-2" width="70"
+                            height="70">
+
+                    </div>
+
+                    <h3
+                        class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]">
+                        <a class="hover:text-orange" href="/service-details">
+                            Tailored Solutions
+                        </a>
+                    </h3>
+
+                    <p class="mb-12 duration-300 group-hover:text-white">
+                        Every business is unique, and so are its needs. We provide customized solutions that fit your
+                        specific requirements, ensuring that you get the most value from our services.<br><br><br>
+                    </p>
+
+                    {# {{ button.data( 'Contact us', url = '/contact', type='secondary', class='group-hover:text-white
+                    group-hover:border-white' ) }} #}
+                </li>
+
+                <li class="group bg-white p-[30px] transition-all duration-300 ease-in-out hover:bg-black">
+                    <div class="relative mb-9 h-[70px] w-[70px]">
+                        <img src="assets/img/th-1/service-icon-black-3.svg" alt="service-icon-black-3" width="70"
+                            height="70">
+
+                    </div>
+                    <h3
+                        class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]">
+                        <a class="hover:text-orange" href="/service-details">
+                            Competitive Pricing
+                        </a>
+                    </h3>
+
+                    <p class="mb-12 duration-300 group-hover:text-white">
+                        High-quality consulting shouldn't break the bank. We offer competitive pricing packages that
+                        make top-tier consulting services accessible to small businesses.
+                    </p>
+
+                    {# {{ button.data( 'Our Products', url = '/products', type='secondary', class='group-hover:text-white
+                    group-hover:border-white' ) }} #}
+                </li>
+
+                <li class="group bg-white p-8 transition-all duration-300 ease-in-out hover:bg-black">
+                    <div class="relative mb-9 h-[70px] w-[70px]">
+                        <img src="assets/img/th-1/service-icon-black-4.svg" alt="service-icon-black-4" width="70"
+                            height="70">
+
+                    </div>
+                    <h3
+                        class="mb-4 block text-xl leading-tight -tracking-[0.5px] group-hover:text-white xl:text-2xl xxl:text-[28px]">
+                        <a class="hover:text-orange" href="/service-details">
+                            Proven Results
+                        </a>
+                    </h3>
+
+                    <p class="mb-12 duration-300 group-hover:text-white">
+                        Our team of experts has a track record of delivering results. We combine industry knowledge with
+                        technical expertise to help your business achieve its goals.
+                    </p>
+
+                    {# {{ button.data( 'Our work', url = '/projects', type='secondary', class='group-hover:text-white
+                    group-hover:border-white' ) }} #}
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>

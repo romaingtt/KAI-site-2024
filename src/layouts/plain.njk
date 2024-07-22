@@ -41,12 +41,8 @@
     
 	<link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="body">
-    {# <a href="#main" class="skiplink">Skip to main content</a> #}
-
-    <div class="layout page-wrapper relative z-[1] bg-white" role="document">
-        {% include "header.njk" %}
-        <main id="main" class="main">
+<body class="bg-black">
+        <main id="main" class="main ">
             {{ content | safe }}
         </main>
         {% include "footer.njk" %}
