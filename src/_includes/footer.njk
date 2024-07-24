@@ -1,11 +1,10 @@
 <footer class="relative z-10 -mt-16 bg-whithish overflow-hidden rounded-tl-3xl rounded-tr-3xl" role="contentinfo">
-    <!-- Footer Text Slider -->
-    <!-- Footer Top -->
-    <div class=" mx-auto w-11/12">
-        <!-- Footer Center -->
+
+    <div class=" mx-auto w-11/12 ">
+
         <div
             class="lg py-16 xl:py-24 grid grid-cols-1 gap-10 sm:grid-cols-[1fr_auto_auto] xl:grid-cols-[1fr_auto_auto_1fr] xl:gap-20">
-            <!-- Footer Widget -->
+
             <div class="flex flex-col gap-y-6">
                 <a class="inline-block" href="/"><!--logo--></a>
                 <p>
@@ -16,18 +15,14 @@
                     XX XX
                 </p>
             </div>
-            <!-- Footer Widget -->
 
-            <!-- Footer Widget -->
             <div class="flex flex-col gap-y-6">
-                <!-- Footer Title -->
-                <h4 class="text-[21px] font-semibold capitalize text-black">
-                    Primary Pages
-                </h4>
-                <!-- Footer Title -->
 
-                <!-- Footer Navbar -->
-                <ul class="flex flex-col gap-y-[10px] capitalize">
+                <h4 class="text-[21px] font-semibold capitalize text-black">
+                    Infos
+                </h4>
+
+                <ul class="flex flex-col gap-y-2 capitalize">
                     <li>
                         <a class="transition-all duration-300 ease-linear hover:text-orange" href="/">Home</a>
                     </li>
@@ -47,17 +42,13 @@
                     </li>
                 </ul>
             </div>
-            <!-- Footer Widget -->
 
-            <!-- Footer Widget -->
             <div class="flex flex-col gap-y-6">
-                <!-- Footer Title -->
-                <h4 class="text-[21px] font-semibold capitalize text-black">
-                    Utility pages
-                </h4>
-                <!-- Footer Title -->
 
-                <!-- Footer Navbar -->
+                <h4 class="text-lg font-semibold capitalize text-black">
+                    Contact
+                </h4>
+
                 <ul class="flex flex-col gap-y-[10px] capitalize">
                     <li>
                         <a class="transition-all duration-300 ease-linear hover:text-orange" href="/signup">Signup</a>
@@ -76,18 +67,14 @@
                     </li>
                 </ul>
             </div>
-            <!-- Footer Widget -->
 
-            <!-- Footer Widget -->
             <div class="flex flex-col gap-y-6">
-                <!-- Footer Title -->
                 <h4 class="text-[21px] font-semibold capitalize text-black">
                     Subscribe to our newsletter
                 </h4>
-                <!-- Footer Title -->
-                <!-- Footer Subscriber Form -->
+                <!-- Form -->
                 <form action="#" method="post" class="">
-                    <div class="relative h-[50px] max-w-80">
+                    <div class="relative h-12 md:max-w-80">
                         <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Enter your email"
                             class="py-4 h-full w-full rounded-3xl border border-black px-6 pr-20 outline-none" required>
                         <button type="submit"
@@ -96,26 +83,10 @@
                         </button>
                     </div>
                 </form>
-                <!-- Footer Subscriber Form -->
             </div>
-            <!-- Footer Widget -->
         </div>
-        <!-- Footer Center -->
-        <div class="h-[1px] w-full bg-[#DBD6CF]"></div>
-        <!-- Footer Bottom -->
-        <div class="py-4 text-center">
-            <p class="text-sm">© Copyright {{ build.timestamp | dateToFormat('yyyy') }} Kaiseki.co EURL</p>
+        <div class="py-8 text-center border-t border-black border-solid border-opacity-20">
+            <p class="text-sm"> © Copyright {{ build.timestamp | dateToFormat('yyyy') }}. Kaiseki.co is a registered trademark. All Rights Reserved. </p>
         </div>
-        <!-- Footer Bottom -->
     </div>
-{# 
-    <!-- Footer Background Shape 1  -->
-    <div
-        class="orange-gradient-2 absolute -top-[290px] right-[90px] -z-[1] h-[406px] w-[406px] -rotate-[58deg] rounded-[406px]">
-    </div>
-
-    <!-- Footer Background Shape 2  -->
-    <div
-        class="orange-gradient-1 absolute -right-[200px] -top-[205px] -z-[1] h-[451px] w-[451px] -rotate-[58deg] rounded-[451px]">
-    </div> #}
 </footer>

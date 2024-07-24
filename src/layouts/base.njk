@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ meta.title }}</title>
 
-	<link rel="preload" href="/assets/fonts/dm-sans/dm-sans-v11-latin-regular-subset.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="../assets/fonts/dm-sans/dm-sans-v11-latin-regular-subset.woff2" as="font" type="font/woff2" crossorigin="">
 
     {% include "meta.njk" %}
 
@@ -16,12 +16,12 @@
 		if( "fonts" in document ) {
 			// Optimization for Repeat Views
 			if( sessionStorage.fontsLoadedCriticalFoftPreload ) {
-				document.documentElement.className += " fonts-loaded-2";
+				document.documentElement.className += " fonts-loaded-2 ";
 				return;
 			}
 
 			document.fonts.load("1em 'DM Sans Subset'").then(function () {
-				document.documentElement.className += " fonts-loaded-1";
+				document.documentElement.className += " fonts-loaded-1 ";
 
 				Promise.all([
 					document.fonts.load("400 1em 'DM Sans'"),
@@ -29,7 +29,7 @@
 					document.fonts.load("italic 1em 'DM Sans'"),
 					document.fonts.load("italic 700 1em 'DM Sans'")
 				]).then(function () {
-					document.documentElement.className += " fonts-loaded-2";
+					document.documentElement.className += " fonts-loaded-2 ";
 
 					// Optimization for Repeat Views
 					sessionStorage.fontsLoadedCriticalFoftPreload = true;
@@ -38,10 +38,10 @@
 		}
 	})();
 	</script>
-    
+
 	<link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="body">
+<body class="body" x-data="{'isModalOpen': false}" x-on:keydown.escape="isModalOpen=false" >
     {# <a href="#main" class="skiplink">Skip to main content</a> #}
 
     <div class="layout page-wrapper relative z-[1] bg-white" role="document">

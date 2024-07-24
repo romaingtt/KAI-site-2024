@@ -1,20 +1,20 @@
-
-    {# Nav Links  #}
-    <ul class="hidden fixed top-0 right-0 px-10 py-16 z-50
+{# Nav Links #}
+<ul class="hidden fixed top-0 right-0 px-10 py-16 z-50
                 md:relative md:flex md:p-0 md:bg-transparent md:flex-row md:space-x-6" id="menu">
-        <li class="md:hidden z-90 fixed top-4 right-6">
-            <a href="javascript:void(0)" class="text-right text-black"
-            onclick="toggleMenu()">&times;</a>
-        </li>
-        {%- for item in collections.pages | eleventyNavigation -%}
-            {%- if item.url -%}
-                {%- set isCurrent = (item.url == page.url) -%}
-                {%- set isParent = item.url != '/' and item.url in page.url -%}
-                <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
-                    <a class="nav__link text-right text-black" href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" {% if isCurrent %} aria-current="page" {% endif %}>
-                        {{ item.title }}
-                    </a>
-                </li>
-            {%- endif -%}
-        {%- endfor -%}
-    </ul>
+	<li class="md:hidden z-90 fixed top-4 right-6">
+		<a href="javascript:void(0)" class="text-right text-black" onclick="toggleMenu()">&times;</a>
+	</li>
+	{%- for item in collections.pages | eleventyNavigation -%}
+	{%- if item.url -%}
+	{%- set isCurrent = (item.url == page.url) -%}
+	{%- set isParent = item.url != '/' and item.url in page.url -%}
+	<li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
+		<a class="nav__link text-right text-black" href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
+			{% if isCurrent %} aria-current="page" {% endif %}>
+			{{ item.title }}
+		</a>
+	</li>
+	<button x-on:click="isModalOpen = true">Contact Us</button>
+	{%- endif -%}
+	{%- endfor -%}
+</ul>

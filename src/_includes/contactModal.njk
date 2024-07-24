@@ -1,0 +1,76 @@
+<div
+	class="fixed inset-0 z-[888] grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300"
+	aria-hidden="true" x-show="isModalOpen" x-cloak>
+
+	<dialog x-bind:open="isModalOpen"
+		class="z-[999] relative rounded-xl bg-white font-sans text-base font-light leading-relaxed text-black antialiased shadow-2xl"
+		x-cloak x-transition>
+
+		<form id="contact" action="" method="post" class="flex flex-col gap-y-5 p-6 mt-4">
+			<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+				<div class="flex flex-col gap-y-2">
+					<label for="contactName" class="text-lg font-semibold leading-relaxed text-black">Enter your
+						name</label>
+					<input type="text" name="contactName" id="contactName" placeholder="Namus Mac Nomus"
+						class="rounded-xl border border-black bg-white px-6 py-4 font-semibold text-black outline-none transition-all duration-300 ease-linear placeholder:text-slate-500 focus:border-blue"
+						required>
+				</div>
+				<div class="flex flex-col gap-y-2">
+					<label for="contactEmail" class="text-lg font-semibold leading-relaxed text-black">Email
+						address</label>
+					<input type="email" name="contactEmail" id="contactEmail" placeholder="namus@acme.com"
+						class="rounded-xl border border-black bg-white px-6 py-4 font-semibold text-black outline-none transition-all duration-300 ease-linear placeholder:text-slate-500 focus:border-blue"
+						required>
+				</div>
+			</div>
+			<div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+				<div class="flex flex-col gap-y-2">
+					<label for="contactPhone" class="text-lg font-semibold leading-relaxed text-black">Phone
+						number</label>
+					<input type="tel" name="contactPhone" id="contactPhone" placeholder="+1XXXXXX"
+						class="rounded-xl border border-black bg-white px-6 py-4 font-semibold text-black outline-none transition-all duration-300 ease-linear placeholder:text-slate-500 focus:border-blue"
+						required>
+				</div>
+				<div class="flex flex-col gap-y-2">
+					<label for="contactCompany" class="text-lg font-semibold leading-relaxed text-black">Company</label>
+					<input type="text" name="contactCompany" id="contactCompany" placeholder="Acme"
+						class="rounded-xl border border-black bg-white px-6 py-4 font-semibold text-black outline-none transition-all duration-300 ease-linear placeholder:text-slate-500 focus:border-blue"
+						required>
+				</div>
+			</div>
+
+			<div class="grid grid-cols-1 gap-6 xl:grid-cols-1">
+				<div class="flex flex-col gap-y-2">
+					<label for="contactType" class="text-lg font-semibold leading-relaxed text-black">Your needs</label>
+					<select name="contactType" id="contactType"
+						class="rounded-xl border border-black bg-white px-6 py-4 font-semibold text-black outline-none transition-all duration-300 ease-linear placeholder:text-slate-500 focus:border-blue"
+						required>
+						<option selected>What are your needs</option>
+						<option value="Consulting">Consulting</option>
+						<option value="Design">Development</option>
+						<option value="Design">Design</option>
+						<option value="Automation">Automation</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="grid grid-cols-1 gap-6">
+				<div class="flex flex-col gap-y-2">
+					<label for="contactMessage" class="text-lg font-semibold leading-relaxed text-black">Message</label>
+					<textarea name="contactMessage" id="contactMessage"
+						class="min-h-[180px] rounded-xl border border-black bg-white px-6 py-4 font-semibold text-black outline-none transition-all duration-300 ease-linear placeholder:text-slate-500 focus:border-blue"
+						placeholder="Write your message here..." required></textarea>
+				</div>
+			</div>
+
+			<div class="flex flex-1 justify-between">
+				<button type="submit"  aria-label="Submit"
+					class="py-4 px-8 font-semibold rounded-full border-2 transition-all duration-300 ease-linear border-blue bg-blue text-white after:bg-orange hover:border-orange hover:text-white hover:bg-orange">
+					Send your message
+				</button>
+				<button class=" text-black bg-opacity-100" aria-label="Close"
+					x-on:click="isModalOpen=false">Close</button>
+			</div>
+		</form>
+	</dialog>
+</div>

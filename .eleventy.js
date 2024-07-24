@@ -10,9 +10,9 @@ const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
 
-//const Image = require("@11ty/eleventy-img");
-const imagesResponsiver = require('eleventy-plugin-images-responsiver');
-const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
+const Image = require("@11ty/eleventy-img");
+//const imagesResponsiver = require('eleventy-plugin-images-responsiver');
+//const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 const EleventyPluginRss = require('@11ty/eleventy-plugin-rss')
 const faviconsPlugin = require("eleventy-plugin-gen-favicons");
@@ -21,8 +21,6 @@ const metagen = require('eleventy-plugin-metagen');
 const { resolve } = require('path')
 
 module.exports = function (eleventyConfig) {
-
-	eleventyConfig.addShortcode('tag', (arg) => `<div>${arg}</div>`);
 
 	eleventyConfig.addPlugin(metagen);
 	/*// https://www.11ty.dev/docs/plugins/image/
@@ -49,7 +47,7 @@ module.exports = function (eleventyConfig) {
 
 	});
 */
-	/*
+
 	// Shortcode to generate a responsive project image
 	eleventyConfig.addShortcode("generateImage", async function (params) {
 
@@ -60,8 +58,8 @@ module.exports = function (eleventyConfig) {
 			classes = "",
 			loadingType = "lazy",
 			viewportSizes = "",
-			outputWidths = ["1080", "1800", "2400"],
-			outputFormats = ["jpeg"],
+			outputWidths = ["480", "1080", "1800", "2400"],
+			outputFormats = ["jpeg", "avif", "webp"],
 			outputQualityJpeg = 75,
 			outputQualityWebp = 75,
 			outputQualityAvif = 75
@@ -73,11 +71,11 @@ module.exports = function (eleventyConfig) {
 
 		let metadata = await Image(src, {
 			widths: outputWidths,
-			sharpJpegOptions: { quality: outputQualityJpeg },
-			sharpWebpOptions: { quality: outputQualityWebp },
 			sharpAvifOptions: { quality: outputQualityAvif },
+			sharpWebpOptions: { quality: outputQualityWebp },
+						sharpJpegOptions: { quality: outputQualityJpeg },
 			formats: outputFormats,
-			urlPath: "/assets/images/",
+			urlPath: "./assets/images/",
 			outputDir: "./_site/assets/images/",
 			cacheOptions: {
 				// If image is a remote URL, this is the amount of time before 11ty fetches a fresh copy
@@ -109,22 +107,22 @@ module.exports = function (eleventyConfig) {
 					width="${lowsrc.width}"
 					height="${lowsrc.height}"
 					alt="${alt}"
-          class="hover-fade"
+          class="h-auto w-full rounded-xl"
 					loading="${loadingType}"
 					decoding="async">
 			  </picture>`;
 
-	});*/
+	});
 
 	eleventyConfig.setServerPassthroughCopyBehavior('copy');
 	eleventyConfig.addPassthroughCopy("public");
 
 	// Plugins
-	eleventyConfig.addPlugin(faviconsPlugin, {	
+	eleventyConfig.addPlugin(faviconsPlugin, {
 	});
 
-	eleventyConfig.addPlugin(imagesResponsiver);
-	eleventyConfig.addPlugin(lazyImagesPlugin);
+	//eleventyConfig.addPlugin(imagesResponsiver);
+	//eleventyConfig.addPlugin(lazyImagesPlugin);
 	eleventyConfig.addPlugin(EleventyPluginNavigation)
 	eleventyConfig.addPlugin(EleventyPluginRss)
 	eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight)
