@@ -6,88 +6,84 @@ order: 1
 ---
 
 {% include "../src/_includes/components/hero.njk" %}
-{% include "../src/_includes/contactModal.njk" %}
 <div class="mx-auto max-w-6xl">
-{% include "../src/_includes/components/service.njk" %}
-<section id="" class="px-4">
-	<!-- Section Spacer -->
-	<div class="pb-20 xl:pb-36">
-		<!-- Section Container -->
-		<div class="global-container">
-			<div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20 xl:gap-28 xxl:gap-32">
-				<!-- Content Left Block -->
-				<div class="order-2 rounded-md md:order-1">
-					{% generateImage src="./src/assets/images/automation.webp", alt="content-image-automation", classes="h-auto
-					w-full rounded-xl"%}
-				</div>
-				<!-- Content Left Block -->
-				<!-- Content Right Block -->
-				<div class="order-1 md:order-2">
-					<!-- Section Content Block -->
-					<div class="mb-6">
-						<h2>Process Automation</h2>
+	{% include "../src/_includes/components/service.njk" %}
+	<section id="" class="px-4">
+		<div class="pb-20 xl:pb-36">
+			<div class="global-container">
+				<div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20 xl:gap-28 xxl:gap-32">
+
+					<div class="order-2 rounded-md md:order-1">
+						{% generateImage src="./src/assets/images/automation.webp", alt="content-image-automation", classes="h-auto
+						w-full rounded-xl"%}
 					</div>
-					<!-- Section Content Block -->
-					<div class="text-lg leading-[1.4] lg:text-xl">
+
+
+					<div class="order-1 md:order-2">
+
+						<div class="mb-6">
+							<h2>Process Automation</h2>
+						</div>
+
+						<div class="text-lg leading-[1.4] lg:text-xl">
+							<p class="mb-2">
+								Process automation using technology to automate repetitive tasks and streamline workflows. This helps
+								businesses increase efficiency, reduce errors, and free up valuable time for more strategic activities.
+							</p>
+							<ul
+								class="flex flex-col gap-y-2 list-disc ml-10 leading-tight tracking-tighter text-black lg:mt-8 lg:text-2xl">
+								<li class="">
+									<b>Workflow Optimization:</b> Streamline your business processes to increase efficiency.
+								</li>
+								<li class="">
+									<b>Task Automation:</b> Automate repetitive tasks to save time and reduce errors.
+								</li>
+								<li class="">
+									<b>Software Integration:</b> Integrate your existing tools and systems for seamless operation.
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+	</section>
+
+	<section id="" class="px-4">
+		<div class="pb-20 xl:pb-36">
+			<div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20 xl:gap-28 xxl:gap-32">
+				<div class="order-2 overflow-hidden w-full">
+					{% generateImage src="./src/assets/images/automation.webp", alt="content-image-automation", classes="h-auto w-full rounded-xl" %}
+				</div>
+				<div class="order-1">
+					<div class="mb-6">
+						<h2>Design Implementation</h2>
+					</div>
+					<div class="text-lg leading-tight">
 						<p class="mb-2">
-							Process automation using technology to automate repetitive tasks and streamline workflows. This helps
-							businesses increase efficiency, reduce errors, and free up valuable time for more strategic activities.
+							Design implementation ensures that your brand’s visual and
+							functional aspects are effectively executed across all platforms. This includes creating user-friendly
+							interfaces,
+							cohesive branding, and high-performing websites and applications.
 						</p>
 						<ul
 							class="flex flex-col gap-y-2 list-disc ml-10 leading-tight tracking-tighter text-black lg:mt-8 lg:text-2xl">
 							<li class="">
-								<b>Workflow Optimization:</b> Streamline your business processes to increase efficiency.
+								<b>UI/UX Design:</b> Create intuitive and engaging user experiences.
 							</li>
 							<li class="">
-								<b>Task Automation:</b> Automate repetitive tasks to save time and reduce errors.
+								<b>Brand Design:</b> Develop a cohesive and compelling brand identity.
 							</li>
 							<li class="">
-								<b>Software Integration:</b> Integrate your existing tools and systems for seamless operation.
+								<b>Web & App Development:</b> Build responsive and high-performing websites and applications.
 							</li>
 						</ul>
 					</div>
-					<!-- Content Right Block -->
-				</div>
-			</div>
-			<!-- Section Container -->
-		</div>
-		<!-- Section Spacer -->
-</section>
-
-<section id="" class="px-4">
-	<div class="pb-20 xl:pb-36">
-		<div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20 xl:gap-28 xxl:gap-32">
-			<div class="order-2 overflow-hidden w-full">
-				{% generateImage src="./src/assets/images/automation.webp", alt="content-image-automation", classes="h-auto,
-				w-full, rounded-xl"%}
-			</div>
-			<div class="order-1">
-				<div class="mb-6">
-					<h2>Design Implementation</h2>
-				</div>
-				<div class="text-lg leading-tight">
-					<p class="mb-2">
-						Design implementation ensures that your brand’s visual and
-						functional aspects are effectively executed across all platforms. This includes creating user-friendly
-						interfaces,
-						cohesive branding, and high-performing websites and applications.
-					</p>
-					<ul
-						class="flex flex-col gap-y-2 list-disc ml-10 leading-tight tracking-tighter text-black lg:mt-8 lg:text-2xl">
-						<li class="">
-							<b>UI/UX Design:</b> Create intuitive and engaging user experiences.
-						</li>
-						<li class="">
-							<b>Brand Design:</b> Develop a cohesive and compelling brand identity.
-						</li>
-						<li class="">
-							<b>Web & App Development:</b> Build responsive and high-performing websites and applications.
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 </div>
 {% include "../src/_includes/components/contact.njk" %}

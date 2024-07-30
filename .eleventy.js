@@ -59,8 +59,8 @@ module.exports = function (eleventyConfig) {
 			loadingType = "lazy",
 			viewportSizes = "",
 			outputWidths = ["480", "1080", "1800", "2400"],
-			outputFormats = ["jpeg", "avif", "webp"],
-			outputQualityJpeg = 75,
+			outputFormats = ["png", "avif", "webp"],
+			outputQualityPng = 75,
 			outputQualityWebp = 75,
 			outputQualityAvif = 75
 		} = params;
@@ -73,7 +73,7 @@ module.exports = function (eleventyConfig) {
 			widths: outputWidths,
 			sharpAvifOptions: { quality: outputQualityAvif },
 			sharpWebpOptions: { quality: outputQualityWebp },
-						sharpJpegOptions: { quality: outputQualityJpeg },
+			sharpJpegOptions: { quality: outputQualityPng },
 			formats: outputFormats,
 			urlPath: "./assets/images/",
 			outputDir: "./_site/assets/images/",
@@ -85,7 +85,7 @@ module.exports = function (eleventyConfig) {
 			},
 		});
 
-		let lowsrc = metadata.jpeg[0];
+		let lowsrc = metadata.png[0];
 
 		let orientation;
 
@@ -107,7 +107,7 @@ module.exports = function (eleventyConfig) {
 					width="${lowsrc.width}"
 					height="${lowsrc.height}"
 					alt="${alt}"
-          class="h-auto w-full rounded-xl"
+          class="${classes}"
 					loading="${loadingType}"
 					decoding="async">
 			  </picture>`;

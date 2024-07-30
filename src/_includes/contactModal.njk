@@ -1,13 +1,29 @@
 <div
-	class="fixed inset-0 z-[888] grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300"
+	class="fixed inset-0 z-[888] grid w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300"
 	aria-hidden="true" x-show="isModalOpen" x-cloak>
 
-	<dialog x-bind:open="isModalOpen"
-		class="z-[999] relative rounded-xl bg-white font-sans text-base font-light leading-relaxed text-black antialiased shadow-2xl"
+	<dialog x-bind:open="isModalOpen" x-trap="isModalOpen" x-trap.inert="isModalOpen" x-trap.noscroll="isModalOpen"
+		class="z-[999] relative sm:rounded-xl sm:h-auto h-full bg-white font-sans text-base font-light leading-relaxed text-black antialiased shadow-2xl w-full sm:w-auto overflow-y-auto"
 		x-cloak x-transition>
-
+		<div class="sm:hidden flex items-center align-middle justify-between px-4 pt-6">
+			<h2>Contact us</h2>
+			<button class="absolute top-2 right-2 text-black bg-opacity-100" aria-label="Close"
+				x-on:click="isModalOpen=false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_4_5683)">
+						<path d="M23 1L1 23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M1 1L23 23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</g>
+					<defs>
+						<clipPath id="clip0_4_5683">
+							<rect width="24" height="24" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</button>
+		</div>
 		<form id="contact" action="" method="post" class="flex flex-col gap-y-5 p-6 mt-4">
-			<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
 				<div class="flex flex-col gap-y-2">
 					<label for="contactName" class="text-lg font-semibold leading-relaxed text-black">Enter your
 						name</label>
@@ -43,10 +59,9 @@
 				<div class="flex flex-col gap-y-2">
 					<label for="contactType" class="text-lg font-semibold leading-relaxed text-black">Your needs</label>
 					<select name="contactType" id="contactType"
-						class="rounded-xl border border-black bg-white px-6 py-4 font-semibold text-black outline-none transition-all duration-300 ease-linear placeholder:text-slate-500 focus:border-blue"
-						required>
-						<option selected>What are your needs</option>
-						<option value="Consulting">Consulting</option>
+						class="rounded-xl border border-black bg-white px-6 py-4 font-semibold text-black outline-none transition-all duration-300 ease-linear placeholder:text-slate-500 focus:border-blue">
+						<option selected>What are you looking for</option>
+						<option value="Consulting">Product Management</option>
 						<option value="Design">Development</option>
 						<option value="Design">Design</option>
 						<option value="Automation">Automation</option>
@@ -64,12 +79,11 @@
 			</div>
 
 			<div class="flex flex-1 justify-between">
-				<button type="submit"  aria-label="Submit"
+				<button type="submit" aria-label="Submit"
 					class="py-4 px-8 font-semibold rounded-full border-2 transition-all duration-300 ease-linear border-blue bg-blue text-white after:bg-orange hover:border-orange hover:text-white hover:bg-orange">
 					Send your message
 				</button>
-				<button class=" text-black bg-opacity-100" aria-label="Close"
-					x-on:click="isModalOpen=false">Close</button>
+				<button class=" text-black bg-opacity-100 mr-4" aria-label="Close" x-on:click="isModalOpen=false">Close</button>
 			</div>
 		</form>
 	</dialog>

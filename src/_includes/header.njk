@@ -1,12 +1,12 @@
-<header class="site-header absolute w-full h-16 text-black" role="banner">
-    <nav id="menu" role="navigation" tabindex="-1" class="px-4 md:px-0 h-full mx-auto flex justify-between items-center">
+<header class="z-[777] fixed md:mx-auto md:w-11/12 sm:px-8 px-2 max-w-6xl left-0 right-0 sm:rounded-3xl sm:mt-4 align-middle" role="banner">
+    <nav id="menu" role="navigation" class="px-4 md:px-0 h-full mx-auto flex justify-between items-center">
             <!-- Logo Here -->
             <a class=" font-bold italic" href="/">logo</a>
             {% include "navigation.njk" %}
 
                 <!-- This is used to open the menu on mobile devices -->
     <div class="flex items-center md:hidden">
-        <button class="text-black text-4xl font-bold opacity-70 hover:opacity-100 duration-300" onclick="toggleMenu()">
+        <button class=" text-black text-4xl font-bold opacity-70 hover:opacity-100 duration-300" onclick="toggleMenu()">
             &#9776;
         </button>
     </div>
